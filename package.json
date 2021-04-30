@@ -1,0 +1,30 @@
+{
+  "name": "Instagram-BackEnd",
+  "version": "1.0.0",
+  "description": "<h2>Overview:</h2> <p>A social media website that gives people the power to bring the world closer together through pictures.</p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaysonSovanHong/Instagram-BackEnd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaysonSovanHong/Instagram-BackEnd/issues"
+  },
+  "homepage": "https://github.com/JaysonSovanHong/Instagram-BackEnd#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.6.0",
+    "rowdy-logger": "^1.0.2",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0"
+  }
+}
