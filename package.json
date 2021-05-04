@@ -4,7 +4,9 @@
   "description": "<h2>Overview:</h2> <p>A social media website that gives people the power to bring the world closer together through pictures.</p>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
