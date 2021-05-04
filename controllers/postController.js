@@ -1,5 +1,5 @@
 const models = require('../models')
-const { post } = require('../routes/postRoutes')
+
 
 const postController = {}
 
@@ -36,12 +36,14 @@ postController.findOne = async(req,res) =>{
 
 postController.create = async(req,res) =>{
     try {
+        console.log(req.file.location)
         const user = await models.user.findOne({
             where:{id: req.headers.authorization}
+
         })
         
         const newPost = await models.post.create({
-            image: req.body.image,
+            image: req.file.location,
             description: req.body.description
         })
 
