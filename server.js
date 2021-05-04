@@ -10,6 +10,9 @@ app.use(require('cors')())
 const userRoutes = require('./routes/userRoutes')
 app.use('', userRoutes)
 
+const postRoutes = require('./routes/postRoutes')
+app.use('', postRoutes)
+
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {

@@ -39,7 +39,8 @@ userController.login = async (req,res)=>{
 userController.verify = async(req,res)=>{
     try {
         const user = await models.user.findOne({
-            where:{id: req.headers.authorization}
+            where:{id: req.headers.authorization},
+            include:{model: models.post}
         })
         console.log(user);
         if(user){res.json({user,message:'user found'})}
@@ -48,6 +49,32 @@ userController.verify = async(req,res)=>{
         res.status(400).json({error:error.message})
     }
 
+}
+
+userController.findAll = async (req,res) =>{
+    try {
+        const user = await models.user.findAll()
+        console.log(user);
+        res.json({user})
+    } catch (error) {
+        console.log('can not find user')
+        res.json({error})
+    }
+}
+
+userController.profile = async (req,res) =>{
+
+    try {
+        const user = await models.user.findOne({
+            where:{id: req.headers.authorization}
+        },{
+            include:{model: models.user}
+        })
+        console.log(user)
+        res.json({user})
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 module.exports = userController

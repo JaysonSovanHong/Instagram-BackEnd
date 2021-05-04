@@ -8,10 +8,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      userid: {
+      userId: {
         type: Sequelize.INTEGER
       },
-      post: {
+      image: {
         type: Sequelize.STRING,
         notEmpty: true,
         notNull: true
