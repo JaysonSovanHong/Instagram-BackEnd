@@ -6,5 +6,6 @@ userRoutes.post('/login',userController.login)
 userRoutes.get('/verify',userController.verify)
 userRoutes.get('/users',userController.findAll)
 userRoutes.get('/profile',userController.profile)
+userRoutes.post('/user/update',userController.updateUser)
 
 module.exports = userRoutes

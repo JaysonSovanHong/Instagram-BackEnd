@@ -13,6 +13,9 @@ app.use('', userRoutes)
 const postRoutes = require('./routes/postRoutes')
 app.use('', postRoutes)
 
+const commentRoutes = require('./routes/commentRoutes')
+app.use('',commentRoutes)
+
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {

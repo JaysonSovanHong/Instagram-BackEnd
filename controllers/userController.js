@@ -77,4 +77,24 @@ userController.profile = async (req,res) =>{
     }
 }
 
+userController.updateUser = async (req, res) => {
+    try {
+     
+        let updatedUser = await models.user.update(
+            {
+                name:req.body.name,
+                email:req.body.email,
+                image:req.body.image
+            },
+            {where: {id: req.headers.authorization}}
+        )
+        console.log(updatedUser)
+        res.json({ updatedUser })
+        
+
+    } catch (error) {
+        res.json({ error })
+    }
+}
+
 module.exports = userController
